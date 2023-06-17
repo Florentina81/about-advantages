@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>Tema</title>
+  </head>
+  <body>
+    <section>
+      <div class="row">
+        <h3>TRADITIONAL AND LOVE</h3>
+        <h2>HOW IT'S MADE ?</h2>
+        <div class="row-columns">
+          <div class="row-column">
+            <img src="img/cow-and-milk.png" alt="" />
+          </div>
+          <div class="row-column">
+            <p class="bold">
+              Ice is a place where you will become not only a little happier,
+              but also healthier. Health is the main value for us, and we follow
+              it when creating our handmade desserts.
+            </p>
+            <p>
+              We use traditional recipes and 100% natural ingredients. Our
+              products are so natural that they can be given to children from
+              the age of three years. Sweets lovers can expect 55 types of ice
+              cream, 15 types of coffee and 23 milkshakes.
+            </p>
+            <div class="button-link" id="open-modal">Read more &rarr;</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row-columns">
+          <div class="row-column-icontxt">
+            <img src="img/icon1.jpg" alt="" />
+            <div class="row-column-title">721</div>
+            <div class="row-column-txt">
+              <p>
+                At 721 Cow, we're passionate about producing the highest quality
+                ice cream possible.
+              </p>
+            </div>
+          </div>
+          <div class="row-column-icontxt">
+            <img src="img/icon2.jpg" alt="" />
+            <div class="row-column-title">16kg</div>
+            <div class="row-column-txt">
+              <p>
+                You can be sure you're getting a scoop of the freshest ice cream
+                around.
+              </p>
+            </div>
+          </div>
+          <div class="row-column-icontxt">
+            <img src="img/icon3.jpg" alt="" />
+            <div class="row-column-title">84</div>
+            <div class="row-column-txt">
+              <p>
+                We use only the freshest, locally-sourced ingredient to make our
+                84 unique and delicious flavours.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function openModal() {
+        // selectam butonul din html
+        let btn = document.querySelector("#open-modal"),
+          layer,
+          box;
+        btn.onclick = () => {
+          // cream dinamic o eticheta html ce va reprezenta "stratul" unde va sta cutia (box-ul) cu text
+          layer = document.createElement("div");
+          // cream cutia unde vom adauga textul/detaliile cerute
+          box = document.createElement("div");
+
+          // acum adaugam stilul CSS din clasele CSS cu ajutorul ClassList API
+          layer.classList.add("layer");
+          box.classList.add("box");
+
+          // adaugam un text simplu in box folosind proprietatea innerText
+          box.innerText =
+            "Acest text este de umplutura si tine loc de detaliile ce ar trebui introduce aici.";
+
+          // adaugam "box-ul" in layer folosind metoda appendChild
+          layer.appendChild(box);
+          // adaugam in eticheta body layerul
+          document.body.appendChild(layer);
+
+          // opreste propagarea evenimentului click pe box
+          // pentru ca acesta se propaga implicit pana la
+          // eticheta HTML daca nu este "oprit"... scopul fiind ca atunci cand se da clic pe "layer", sa ichidem tot modalul
+          box.onclick = (e) => e.stopPropagation();
+          layer.onclick = () => {
+            layer.remove();
+          };
+        };
+      }
+      openModal();
+    </script>
+  </body>
+</html>
