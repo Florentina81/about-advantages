@@ -70,42 +70,5 @@
         </div>
       </div>
     </section>
-
-    <script>
-      function openModal() {
-        // selectam butonul din html
-        let btn = document.querySelector("#open-modal"),
-          layer,
-          box;
-        btn.onclick = () => {
-          // cream dinamic o eticheta html ce va reprezenta "stratul" unde va sta cutia (box-ul) cu text
-          layer = document.createElement("div");
-          // cream cutia unde vom adauga textul/detaliile cerute
-          box = document.createElement("div");
-
-          // acum adaugam stilul CSS din clasele CSS cu ajutorul ClassList API
-          layer.classList.add("layer");
-          box.classList.add("box");
-
-          // adaugam un text simplu in box folosind proprietatea innerText
-          box.innerText =
-            "Acest text este de umplutura si tine loc de detaliile ce ar trebui introduce aici.";
-
-          // adaugam "box-ul" in layer folosind metoda appendChild
-          layer.appendChild(box);
-          // adaugam in eticheta body layerul
-          document.body.appendChild(layer);
-
-          // opreste propagarea evenimentului click pe box
-          // pentru ca acesta se propaga implicit pana la
-          // eticheta HTML daca nu este "oprit"... scopul fiind ca atunci cand se da clic pe "layer", sa ichidem tot modalul
-          box.onclick = (e) => e.stopPropagation();
-          layer.onclick = () => {
-            layer.remove();
-          };
-        };
-      }
-      openModal();
-    </script>
   </body>
 </html>
