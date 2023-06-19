@@ -1,95 +1,101 @@
 <!DOCTYPE html>
 <html lang="en=EN">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Titan+One&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
-    />
-    <link rel="stylesheet" href="./css/main.min.css" />
-    <title>Tema</title>
-  </head>
-  <body>
-    <section class="about">
-      <div class="row">
-        <span>TRADITIONAL AND LOVE</span>
-        <h2>HOW IT'S MADE ?</h2>
-        <div class="row-columns img-sectionbg1">
-          <div class="row-column">
-            <img src="img/cow-and-milk.png" alt="" />
-          </div>
-          <div class="row-column">
-            <p class="bold">
-              Ice is a place where you will become not only a little happier,
-              but also healthier. Health is the main value for us, and we follow
-              it when creating our handmade desserts.
-            </p>
-            <p class="normal">
-              We use traditional recipes and 100% natural ingredients. Our
-              products are so natural that they can be given to children from
-              the age of three years. Sweets lovers can expect 55 types of ice
-              cream, 15 types of coffee and 23 milkshakes.
-            </p>
-            <div class="button-link" id="open-modal">Read more &rarr;</div>
-          </div>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Titan+One&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
+  <link rel="stylesheet" href="./css/main.min.css" />
+  <title>Tema</title>
+</head>
+
+<body>
+
+
+  <section class="about">
+    <div class="about__row">
+      <span class="about__title">TRADITIONAL AND LOVE</span>
+      <h2 class="about__heading">HOW IT'S MADE ?</h2>
+      <div class="about__row-columns about__row-columns--img-sectionbg1">
+        <div class="about__row-column">
+          <img src="img/cow-and-milk.png" alt="" class="about__image" />
         </div>
-      </div>
-    </section>
-    <section class="advantages">
-      <div class="row">
-        <div class="row-columns">
-          <div class="row-column-icontxt">
-            <img src="img/icon1.png" alt="" />
-            <div class="row-column-title">721</div>
-            <div class="row-column-txt">
-              <p>
-                At 721 Cow, we're passionate about producing the highest quality
-                ice cream possible.
-              </p>
-            </div>
-          </div>
-          <div class="row-column-icontxt">
-            <img src="img/icon-apple.png" alt="" />
-            <div class="row-column-title">16kg</div>
-            <div class="row-column-txt">
-              <p>
-                You can be sure you're getting a scoop of the freshest ice cream
-                around.
-              </p>
-            </div>
-          </div>
-          <div class="row-column-icontxt">
-            <img src="img/icon-heart.png" alt="" />
-            <div class="row-column-title">84</div>
-            <div class="row-column-txt">
-              <p>
-                We use only the freshest, locally-sourced ingredient to make our
-                84 unique and delicious flavours.
-              </p>
-            </div>
-          </div>
+        <div class="about__row-column">
+          <p class="about__description about__description--bold">
+            Ice is a place where you will become not only a little happier,
+            but also healthier. Health is the main value for us, and we follow
+            it when creating our handmade desserts.
+          </p>
+          <p class="about__description about__description--normal">
+            We use traditional recipes and 100% natural ingredients. Our
+            products are so natural that they can be given to children from
+            the age of three years. Sweets lovers can expect 55 types of ice
+            cream, 15 types of coffee and 23 milkshakes.
+          </p>
+          <div class="about__button-link" id="open-modal">Read more &rarr;</div>
         </div>
-      </div>
-    </section>
-    <div class="modal-area">
-      <div class="modal-area-box">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati
-        ex laudantium dignissimos, aspernatur nam, similique unde neque
-        consequatur ratione, rem tenetur quasi facilis perspiciatis nesciunt
-        repellendus modi nulla? Ad.
       </div>
     </div>
-    <script src="js/modal.js"></script>
-  </body>
+  </section>
+
+
+
+  <section class="advantages">
+    <h2 class="advantages__title">ADVANTAGES</h2>
+    <div class="advantages__row">
+      <div class="advantages__row-columns">
+        <div class="advantages__row-column-icontxt">
+          <img src="img/icon1.png" alt="" class="advantages__image" />
+          <div class="advantages__row-column-title">721</div>
+          <div class="advantages__row-column-txt">
+            <p class="advantages__description">
+              At 721 Cow, we're passionate about producing the highest quality
+              ice cream possible.
+            </p>
+          </div>
+        </div>
+        <div class="advantages__row-column-icontxt">
+          <img src="img/icon-apple.png" alt="" class="advantages__image" />
+          <div class="advantages__row-column-title">16kg</div>
+          <div class="advantages__row-column-txt">
+            <p class="advantages__description">
+              You can be sure you're getting a scoop of the freshest ice cream
+              around.
+            </p>
+          </div>
+        </div>
+        <div class="advantages__row-column-icontxt">
+          <img src="img/icon-heart.png" alt="" class="advantages__image" />
+          <div class="advantages__row-column-title">84</div>
+          <div class="advantages__row-column-txt">
+            <p class="advantages__description">
+              We use only the freshest, locally-sourced ingredient to make our
+              84 unique and delicious flavors.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal-area">
+    <div class="modal-area__box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati
+      ex laudantium dignissimos, aspernatur nam, similique unde neque
+      consequatur ratione, rem tenetur quasi facilis perspiciatis nesciunt
+      repellendus modi nulla? Ad.
+    </div>
+  </div>
+
+
+  <script src="js/modal.js"></script>
+</body>
+
 </html>
